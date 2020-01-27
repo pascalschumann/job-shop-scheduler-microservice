@@ -1,4 +1,4 @@
-package com.pascalschumann.jobshopscheduler.scheduler.impl.datastructure;
+package com.pascalschumann.jobshopschedulermicroservice.scheduler.impl.datastructure;
 
 import java.util.List;
 
@@ -7,39 +7,39 @@ import java.util.List;
  * - pop any element with O(1) <br>
  * - remove O(n), since list must be reindexed <br>
  * - push() O(1) <br>
- * - GetById(), Contains(): O(1) but remains the idea of a mathematical set: every item exists only once
+ * - GetById(), Contains(): O(1) but remains the idea of a mathematical set: every item exists only
+ * once
  *
  * @author Pascal Schumann
  */
-public interface IStackSet<T extends IEntity>
-extends Iterable<T> {
+public interface IStackSet<T extends IEntity> extends Iterable<T> {
 
-	void Push(T element);
+    void Push(T element);
 
-	void PushAll(Iterable<T> elements);
+    void PushAll(Iterable<T> elements);
 
-	void Remove(T element);
+    void Remove(T element);
 
-	boolean Any();
+    boolean Any();
 
-	T PopAny();
+    T PopAny();
 
-	T GetAny();
+    T GetAny();
 
-	/**
-	 * Should return a new list which contains all elements
-	 */
-	List<T> GetAll();
+    /**
+     * Should return a new list which contains all elements
+     */
+    List<T> GetAll();
 
-	void Clear();
+    void Clear();
 
-	T GetById(Id id);
+    T GetById(Id id);
 
-	boolean Contains(T t);
+    boolean Contains(T t);
 
-	boolean Contains(Id id);
+    boolean Contains(Id id);
 
-	void RemoveById(Id id);
+    void RemoveById(Id id);
 
-	int size();
+    int size();
 }

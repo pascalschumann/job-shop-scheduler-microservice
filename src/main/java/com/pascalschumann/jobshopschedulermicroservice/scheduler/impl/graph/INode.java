@@ -1,14 +1,13 @@
-package com.pascalschumann.jobshopscheduler.scheduler.impl.graph;
+package com.pascalschumann.jobshopschedulermicroservice.scheduler.impl.graph;
 
-import com.pascalschumann.jobshopscheduler.scheduler.impl.datastructure.IEntity;
+import com.pascalschumann.jobshopschedulermicroservice.scheduler.impl.datastructure.IEntity;
 
 /**
  * TODO: fill this
  *
  * @author Pascal Schumann
  */
-public interface INode
-extends IEntity {
+public interface INode extends IEntity {
 
-	IEntity GetEntity();
+    IEntity GetEntity();
 }

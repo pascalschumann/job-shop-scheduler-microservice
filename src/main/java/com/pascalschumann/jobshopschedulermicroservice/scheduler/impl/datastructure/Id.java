@@ -1,4 +1,4 @@
-package com.pascalschumann.jobshopscheduler.scheduler.impl.datastructure;
+package com.pascalschumann.jobshopschedulermicroservice.scheduler.impl.datastructure;
 
 import java.util.Objects;
 import java.util.concurrent.atomic.AtomicLong;
@@ -10,36 +10,36 @@ import java.util.concurrent.atomic.AtomicLong;
  */
 public class Id {
 
-	private static final AtomicLong idCounter = new AtomicLong();
-	private final long id;
+    private static final AtomicLong idCounter = new AtomicLong();
+    private final long id;
 
-	public Id() {
+    public Id() {
 
-		id = idCounter.getAndIncrement();
-	}
+        id = idCounter.getAndIncrement();
+    }
 
-	public Id(final long id) {
-		this.id = id;
-	}
+    public Id(final long id) {
+        this.id = id;
+    }
 
-	public long getValue() {
-		return id;
-	}
+    public long getValue() {
+        return id;
+    }
 
-	@Override
-	public boolean equals(final Object o) {
-		if (this == o) {
-			return true;
-		}
-		if (o == null || getClass() != o.getClass()) {
-			return false;
-		}
-		final Id id1 = (Id) o;
-		return id == id1.id;
-	}
+    @Override
+    public boolean equals(final Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        final Id id1 = (Id) o;
+        return id == id1.id;
+    }
 
-	@Override
-	public int hashCode() {
-		return Objects.hash(id);
-	}
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
+    }
 }

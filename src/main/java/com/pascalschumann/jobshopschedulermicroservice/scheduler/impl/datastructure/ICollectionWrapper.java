@@ -1,4 +1,4 @@
-package com.pascalschumann.jobshopscheduler.scheduler.impl.datastructure;
+package com.pascalschumann.jobshopschedulermicroservice.scheduler.impl.datastructure;
 
 import java.util.List;
 
@@ -7,31 +7,30 @@ import java.util.List;
  *
  * @author Pascal Schumann
  */
-public interface ICollectionWrapper<T extends IEntity>
-extends Iterable<T> {
+public interface ICollectionWrapper<T extends IEntity> extends Iterable<T> {
 
-	boolean any();
+    boolean any();
 
-	boolean isEmpty();
+    boolean isEmpty();
 
-	List<T> GetAll();
+    List<T> GetAll();
 
-	void Add(T item);
+    void Add(T item);
 
-	void AddAll(Iterable<T> items);
+    void AddAll(Iterable<T> items);
 
-	T GetAny();
+    T GetAny();
 
-	/**
-	 * returns a copy of inner collection as stackSet
-	 */
-	IStackSet<T> ToStackSet();
+    /**
+     * returns a copy of inner collection as stackSet
+     */
+    IStackSet<T> ToStackSet();
 
-	void Clear();
+    void Clear();
 
-	void Remove(T t);
+    void Remove(T t);
 
-	T GetById(Id id);
+    T GetById(Id id);
 
-	boolean Contains(T t);
+    boolean Contains(T t);
 }

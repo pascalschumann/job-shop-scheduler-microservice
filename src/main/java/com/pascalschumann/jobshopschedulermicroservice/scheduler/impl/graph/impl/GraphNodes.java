@@ -1,19 +1,17 @@
-package com.pascalschumann.jobshopscheduler.scheduler.impl.graph.impl;
+package com.pascalschumann.jobshopschedulermicroservice.scheduler.impl.graph.impl;
 
-import com.pascalschumann.jobshopscheduler.scheduler.impl.datastructure.impl.CollectionWrapperWithStackSet;
+import com.pascalschumann.jobshopschedulermicroservice.scheduler.impl.datastructure.impl.CollectionWrapperWithStackSet;
 
 /**
  * TODO: fill this
  *
  * @author Pascal Schumann
  */
-public class GraphNodes
-extends CollectionWrapperWithStackSet<IGraphNode> {
+public class GraphNodes extends CollectionWrapperWithStackSet<IGraphNode> {
 
-	GraphNodes(final Iterable<IGraphNode> list) {
-		AddAll(list);
-	}
+    GraphNodes(final Iterable<IGraphNode> list) {
+        AddAll(list);
+    }
 
-	GraphNodes() {
-	}
+    GraphNodes() {}
 }

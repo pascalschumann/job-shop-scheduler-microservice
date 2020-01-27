@@ -1,50 +1,50 @@
-package com.pascalschumann.jobshopscheduler.scheduler.impl.graph.impl;
+package com.pascalschumann.jobshopschedulermicroservice.scheduler.impl.graph.impl;
 
-import com.pascalschumann.jobshopscheduler.scheduler.impl.datastructure.Id;
-import com.pascalschumann.jobshopscheduler.scheduler.impl.graph.IEdge;
-import com.pascalschumann.jobshopscheduler.scheduler.impl.graph.INode;
+import com.pascalschumann.jobshopschedulermicroservice.scheduler.impl.datastructure.Id;
+import com.pascalschumann.jobshopschedulermicroservice.scheduler.impl.graph.IEdge;
+import com.pascalschumann.jobshopschedulermicroservice.scheduler.impl.graph.INode;
 
-public class Edge
-implements IEdge {
+public class Edge implements IEdge {
 
-	private final INode TailNode;
-	private final INode HeadNode;
-	private final Id _id = new Id();
+    private final INode TailNode;
+    private final INode HeadNode;
+    private final Id _id = new Id();
 
-	public Edge(final INode tailNode, final INode toNode) {
-		TailNode = tailNode;
-		HeadNode = toNode;
-	}
+    public Edge(final INode tailNode, final INode toNode) {
+        TailNode = tailNode;
+        HeadNode = toNode;
+    }
 
-	@Override
+    @Override
     public INode GetTailNode() {
-		return TailNode;
-	}
+        return TailNode;
+    }
 
-	@Override
+    @Override
     public INode GetHeadNode() {
-		return HeadNode;
-	}
+        return HeadNode;
+    }
 
-	@Override
-	public String toString() {
-		return TailNode + " --> " + HeadNode;
-	}
+    @Override
+    public String toString() {
+        return TailNode + " --> " + HeadNode;
+    }
 
-	@Override
-	public boolean equals(final Object obj) {
-		final Edge other = (Edge) obj;
-		final boolean headAndTailAreEqual = HeadNode.equals(other.HeadNode) && TailNode.equals(other.TailNode);
-		return headAndTailAreEqual;
-	}
+    @Override
+    public boolean equals(final Object obj) {
+        final Edge other = (Edge) obj;
+        final boolean headAndTailAreEqual =
+                        HeadNode.equals(other.HeadNode) && TailNode.equals(other.TailNode);
+        return headAndTailAreEqual;
+    }
 
-	@Override
-	public int hashCode() {
-		return HeadNode.hashCode() + TailNode.hashCode();
-	}
+    @Override
+    public int hashCode() {
+        return HeadNode.hashCode() + TailNode.hashCode();
+    }
 
-	@Override
+    @Override
     public Id getId() {
-		return _id;
-	}
+        return _id;
+    }
 }

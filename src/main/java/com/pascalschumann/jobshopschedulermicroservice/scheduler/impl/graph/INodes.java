@@ -1,8 +1,8 @@
-package com.pascalschumann.jobshopscheduler.scheduler.impl.graph;
-
-import com.pascalschumann.jobshopscheduler.scheduler.impl.datastructure.ICollectionWrapper;
+package com.pascalschumann.jobshopschedulermicroservice.scheduler.impl.graph;
 
 import java.util.Stack;
+
+import com.pascalschumann.jobshopschedulermicroservice.scheduler.impl.datastructure.ICollectionWrapper;
 
 /**
  * TODO: fill this

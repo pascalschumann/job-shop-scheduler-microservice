@@ -1,4 +1,4 @@
-package com.pascalschumann.jobshopscheduler.scheduler.impl.datastructure;
+package com.pascalschumann.jobshopschedulermicroservice.scheduler.impl.datastructure;
 
 /**
  * TODO: fill this
@@ -6,5 +6,5 @@ package com.pascalschumann.jobshopscheduler.scheduler.impl.datastructure;
  * @author Pascal Schumann
  */
 public interface IEntity {
-	Id getId();
+    Id getId();
 }

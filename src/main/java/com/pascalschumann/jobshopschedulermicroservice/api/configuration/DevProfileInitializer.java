@@ -35,11 +35,10 @@ public class DevProfileInitializer implements ApplicationRunner {
         return args -> {
             final int maxLength = 10;
             for (int i = 0; i < maxLength; i++) {
-                final String name = RandomStringUtils.randomAlphabetic(maxLength);
+                final String name = RandomStringUtils.randomAlphabetic(maxLength).toLowerCase();
                 final String password = RandomStringUtils.randomAlphabetic(maxLength);
                 log.info("Filling db " + repository.save(new User(name, password)));
             }
-
         };
     }
 }

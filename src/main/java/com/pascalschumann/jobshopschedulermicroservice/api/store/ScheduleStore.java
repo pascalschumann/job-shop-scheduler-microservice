@@ -1,11 +1,11 @@
-package com.pascalschumann.jobshopscheduler.api.store;
+package com.pascalschumann.jobshopschedulermicroservice.api.store;
 
 import java.util.HashMap;
 
 import org.springframework.stereotype.Component;
 
-import com.pascalschumann.jobshopscheduler.api.model.ScheduleResponse;
-import com.pascalschumann.jobshopscheduler.scheduler.impl.datastructure.Id;
+import com.pascalschumann.jobshopschedulermicroservice.api.model.ScheduleResponse;
+import com.pascalschumann.jobshopschedulermicroservice.scheduler.impl.datastructure.Id;
 
 /**
  * A in-memory storage for the created schedules
@@ -13,6 +13,5 @@ import com.pascalschumann.jobshopscheduler.scheduler.impl.datastructure.Id;
  * @author Pascal Schumann
  */
 @Component
-public class ScheduleStore
-extends HashMap<Id, ScheduleResponse> {
+public class ScheduleStore extends HashMap<Id, ScheduleResponse> {
 }

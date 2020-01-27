@@ -1,8 +1,8 @@
-package com.pascalschumann.jobshopscheduler.scheduler.impl;
+package com.pascalschumann.jobshopschedulermicroservice.scheduler.impl;
 
 import java.util.List;
 
-import com.pascalschumann.jobshopscheduler.scheduler.impl.modelWrappers.Operation;
+import com.pascalschumann.jobshopschedulermicroservice.scheduler.impl.modelWrappers.Operation;
 
 /**
  * TODO: fill this
@@ -11,5 +11,5 @@ import com.pascalschumann.jobshopscheduler.scheduler.impl.modelWrappers.Operatio
  */
 public interface IPriorityRule {
 
-	Operation GetHighestPriorityOperation(Long now, List<Operation> operations);
+    Operation GetHighestPriorityOperation(Long now, List<Operation> operations);
 }

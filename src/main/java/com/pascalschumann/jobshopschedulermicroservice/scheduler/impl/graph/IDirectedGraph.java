@@ -1,10 +1,8 @@
-package com.pascalschumann.jobshopscheduler.scheduler.impl.graph;
+package com.pascalschumann.jobshopschedulermicroservice.scheduler.impl.graph;
 
-import java.util.Collection;
-
-import com.pascalschumann.jobshopscheduler.scheduler.impl.datastructure.IStackSet;
-import com.pascalschumann.jobshopscheduler.scheduler.impl.datastructure.Id;
-import com.pascalschumann.jobshopscheduler.scheduler.impl.graph.impl.IGraphNode;
+import com.pascalschumann.jobshopschedulermicroservice.scheduler.impl.datastructure.IStackSet;
+import com.pascalschumann.jobshopschedulermicroservice.scheduler.impl.datastructure.Id;
+import com.pascalschumann.jobshopschedulermicroservice.scheduler.impl.graph.impl.IGraphNode;
 
 /**
  * TODO: fill this
@@ -13,73 +11,75 @@ import com.pascalschumann.jobshopscheduler.scheduler.impl.graph.impl.IGraphNode;
  */
 public interface IDirectedGraph {
 
-	/**
-	 * one fromNode has many toNodes
-	 * 
-	 * @return: toNodes
-	 */
-	INodes GetSuccessorNodes(INode node);
+    /**
+     * one fromNode has many toNodes
+     * 
+     * @return: toNodes
+     */
+    INodes GetSuccessorNodes(INode node);
 
-	INodes GetSuccessorNodes(Id nodeId);
+    INodes GetSuccessorNodes(Id nodeId);
 
-	INodes GetPredecessorNodes(INode node);
+    INodes GetPredecessorNodes(INode node);
 
-	INodes GetPredecessorNodes(Id nodeId);
+    INodes GetPredecessorNodes(Id nodeId);
 
-	INodes GetPredecessorNodesRecursive(INode startNode);
+    INodes GetPredecessorNodesRecursive(INode startNode);
 
-	void AddEdges(Iterable<IEdge> edges);
+    void AddEdges(Iterable<IEdge> edges);
 
-	void AddEdges(INode fromNode, INodes nodes);
+    void AddEdges(INode fromNode, INodes nodes);
 
-	void AddEdge(IEdge edge);
+    void AddEdge(IEdge edge);
 
-	int CountEdges();
+    int CountEdges();
 
-	/**
-	 * No duplicates should be contained
-	 */
-	IStackSet<INode> GetAllUniqueNodes();
+    /**
+     * No duplicates should be contained
+     */
+    IStackSet<INode> GetAllUniqueNodes();
 
-	/// <summary>
-	///
-	/// </summary>
-	/// <param name="node"></param>
-	/// <param name="connectParentsWithChilds"> if true this removes the node,
-	/// the parents will point to its childs afterwards</param>
-	/// /// <param name="removeEdges">take false if all predecessors/successors
-	/// are also removed</param>
-	void RemoveNode(INode node, boolean connectParentsWithChilds, boolean removeEdges);// = true); TODO
+    /// <summary>
+    ///
+    /// </summary>
+    /// <param name="node"></param>
+    /// <param name="connectParentsWithChilds"> if true this removes the node,
+    /// the parents will point to its childs afterwards</param>
+    /// /// <param name="removeEdges">take false if all predecessors/successors
+    /// are also removed</param>
+    void RemoveNode(INode node, boolean connectParentsWithChilds, boolean removeEdges);// = true);
+                                                                                       // TODO
 
-	void RemoveNode(INode node, boolean connectParentsWithChilds);
+    void RemoveNode(INode node, boolean connectParentsWithChilds);
 
-	void RemoveNode(Id nodeId, boolean connectParentsWithChilds, boolean removeEdges);// = true); TODO
+    void RemoveNode(Id nodeId, boolean connectParentsWithChilds, boolean removeEdges);// = true);
+                                                                                      // TODO
 
-	void RemoveNode(Id nodeId, boolean connectParentsWithChilds);
+    void RemoveNode(Id nodeId, boolean connectParentsWithChilds);
 
-	INodes GetLeafNodes();
+    INodes GetLeafNodes();
 
-	INodes GetRootNodes();
+    INodes GetRootNodes();
 
-	void ReplaceNodeByDirectedGraph(INode node, IDirectedGraph graphToInsert);
+    void ReplaceNodeByDirectedGraph(INode node, IDirectedGraph graphToInsert);
 
-	void ReplaceNodeByDirectedGraph(Id nodeId, IDirectedGraph graphToInsert);
+    void ReplaceNodeByDirectedGraph(Id nodeId, IDirectedGraph graphToInsert);
 
-	void ReplaceNodeByOtherNode(Id nodeId, INode otherNode);
+    void ReplaceNodeByOtherNode(Id nodeId, INode otherNode);
 
-	IStackSet<IEdge> GetEdges();
+    IStackSet<IEdge> GetEdges();
 
-	void Clear();
+    void Clear();
 
-	boolean IsEmpty();
+    boolean IsEmpty();
 
-	boolean Contains(INode node);
+    boolean Contains(INode node);
 
-	boolean Contains(Id nodeId);
+    boolean Contains(Id nodeId);
 
-	INode GetNode(Id id);
+    INode GetNode(Id id);
 
-	IStackSet<IGraphNode> GetNodes();
+    IStackSet<IGraphNode> GetNodes();
 
-	void RemoveEdge(INode parent, INode child);
+    void RemoveEdge(INode parent, INode child);
 }

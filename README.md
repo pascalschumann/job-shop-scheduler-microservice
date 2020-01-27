@@ -2,7 +2,7 @@
 Offers a job shop scheduler as microservice with authentication.
 
 ## Implemented features
-- A REST api
+- REST api for creating/receiving schedules
 - Swagger documentation
 - In-memory database H2 where resulting schedules are hold
 - [CI/CD with Travis CI](https://travis-ci.com/pascalschumann/job-shop-scheduler-microservice)

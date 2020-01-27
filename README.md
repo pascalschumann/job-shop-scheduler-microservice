@@ -1,11 +1,11 @@
-# spring-rest-crud-template ![status](https://travis-ci.com/pascalschumann/spring-rest-crud-template.svg?branch=master "Status")
-A spring CRUD template to accelerate setting up a microservice with authentication.
+# job-shop-scheduler-microservice ![status](https://travis-ci.com/pascalschumann/job-shop-scheduler-microservice.svg?branch=master "Status")
+Offers a job shop scheduler as microservice with authentication.
 
 ## Implemented features
-- A CRUD REST api
+- A REST api
 - Swagger documentation
-- In-memory database H2 where entities are hold
-- [CI/CD with Travis CI](https://travis-ci.com/pascalschumann/spring-rest-crud-template)
+- In-memory database H2 where resulting schedules are hold
+- [CI/CD with Travis CI](https://travis-ci.com/pascalschumann/job-shop-scheduler-microservice)
 - About endpoint which provides data about the service (version, buildTime, artifactId, ...)
 - Dev spring profile, which prefills the database
 - Basic authentication with configurable admin password
@@ -24,9 +24,9 @@ A spring CRUD template to accelerate setting up a microservice with authenticati
 - Run tests<br>
 `mvn clean verify -DadminPassword=password`
 - Start app<br>
-`java -jar spring-rest-crud-template.jar -DadminPassword=password`
+`java -jar job-shop-scheduler-microservice.jar -DadminPassword=password`
 - Start app with dev profile<br>
-`java -jar spring-rest-crud-template.jar -DadminPassword=password -Dspring.profiles.active=dev`
+`java -jar job-shop-scheduler-microservice.jar -DadminPassword=password -Dspring.profiles.active=dev`
 - For requests use basic auth with user "admin" with configured -DadminPassword
 
 ## Used resources

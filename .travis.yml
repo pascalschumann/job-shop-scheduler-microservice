@@ -1,0 +1,11 @@
+language: java
+dist: bionic
+
+services:
+  - docker
+
+install:
+  - mvn clean package
+
+script:
+  - mvn verify -DadminPassword=password

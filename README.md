@@ -16,7 +16,8 @@ Offers a job shop scheduler as microservice with authentication.
 - Replacing in-memory database H2 by [Postgres docker container](https://hub.docker.com/_/postgres)
 
 ## Known bugs
-- 
+- Naming convention: Since the scheduler is ported from C#, there some naming issues e.g. methods start with capital letter.
+- /schedules api is not working yet (controller impl issues)
 
 ## Build, run Tests & operate
 - Build<br>

@@ -95,4 +95,9 @@ public class CollectionWrapperWithStackSet<T extends IEntity> implements ICollec
     public boolean isEmpty() {
         return StackSet.Any() == false;
     }
+
+    @Override
+    public int size() {
+        return StackSet.size();
+    }
 }

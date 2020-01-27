@@ -21,6 +21,11 @@ public class Machine {
     @JsonProperty("machineGroupId")
     private Long machineGroupId = null;
 
+    public Machine(final Long id, final Long machineGroupId) {
+        this.id = id;
+        this.machineGroupId = machineGroupId;
+    }
+
     /**
      * Get id
      * 

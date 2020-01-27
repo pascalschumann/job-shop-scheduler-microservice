@@ -38,7 +38,7 @@ public class OperationGraph extends DirectedGraph {
             if (operations.containsKey(operation.getId())) {
                 throw new RuntimeException("Every job must have a unique id.");
             } else {
-                operations.put(new Id(jobToPlan.getId()), operation);
+                operations.put(jobToPlan.getId(), operation);
             }
 
             if (jobToPlan.getPredecessorId() == null) {

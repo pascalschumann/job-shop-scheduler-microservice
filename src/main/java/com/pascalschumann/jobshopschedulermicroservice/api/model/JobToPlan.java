@@ -7,6 +7,8 @@ import javax.validation.constraints.NotNull;
 import org.springframework.validation.annotation.Validated;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.pascalschumann.jobshopschedulermicroservice.scheduler.impl.datastructure.IEntity;
+import com.pascalschumann.jobshopschedulermicroservice.scheduler.impl.datastructure.Id;
 
 import io.swagger.annotations.ApiModelProperty;
 
@@ -14,10 +16,10 @@ import io.swagger.annotations.ApiModelProperty;
  * JobToPlan
  */
 @Validated
-public class JobToPlan {
+public class JobToPlan implements IEntity {
 
     @JsonProperty("id")
-    private Long id = null;
+    private Id id = null;
 
     @JsonProperty("duration")
     private Long duration = null;
@@ -37,30 +39,37 @@ public class JobToPlan {
     @JsonProperty("predecessorId")
     private Long predecessorId = null;
 
-    @JsonProperty("successorId")
-    private Long successorId = null;
+    @JsonProperty("successorIds")
+    private Long[] successorIds = null;
+
+    public JobToPlan(final Id id, final Long duration, final Long machineGroupId) {
+        this.id = id;
+        this.duration = duration;
+        this.machineGroupId = machineGroupId;
+    }
 
     /**
      * Get id
      *
      * @return id
      **/
+    @Override
     @ApiModelProperty(required = true, value = "")
     @NotNull
-    public Long getId() {
+    public Id getId() {
         return id;
     }
 
-    public void setId(final Long id) {
+    public void setId(final Id id) {
         this.id = id;
     }
 
-    public Long getSuccessorId() {
-        return successorId;
+    public Long[] getSuccessorIds() {
+        return successorIds;
     }
 
-    public void setSuccessorId(final Long successorId) {
-        this.successorId = successorId;
+    public void setSuccessorIds(final Long[] successorIds) {
+        this.successorIds = successorIds;
     }
 
     public Long getPredecessorId() {

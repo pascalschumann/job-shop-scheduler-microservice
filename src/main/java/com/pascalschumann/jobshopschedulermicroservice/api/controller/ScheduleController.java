@@ -1,10 +1,15 @@
 package com.pascalschumann.jobshopschedulermicroservice.api.controller;
 
+import static com.pascalschumann.jobshopschedulermicroservice.api.configuration.Constants.API_ENDPOINT_SCHEDULES;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.pascalschumann.jobshopschedulermicroservice.api.model.ScheduleRequest;
@@ -33,20 +38,20 @@ public class ScheduleController {
         this.scheduleService = scheduleService;
     }
 
-
-    public void createSchedule(final ScheduleRequest body) {
+    @PostMapping(API_ENDPOINT_SCHEDULES)
+    public void createSchedule(@RequestBody final ScheduleRequest body) {
 
         scheduleService.createSchedule(body);
     }
 
-
-    public ScheduleResponse[] listSchedules() {
+    @GetMapping(API_ENDPOINT_SCHEDULES)
+    public ScheduleResponse[] all() {
 
         return scheduleService.getSchedules();
     }
 
-
-    public ScheduleResponse showScheduleById(final Long scheduleId) {
+    @GetMapping(API_ENDPOINT_SCHEDULES + "/{id}")
+    public ScheduleResponse one(@RequestBody final Long scheduleId) {
         return scheduleService.getSchedule(new Id(scheduleId));
     }
 }

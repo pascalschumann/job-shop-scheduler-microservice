@@ -73,8 +73,12 @@ public class Operation implements IEntity {
         return new Id(jobToPlan.getPredecessorId());
     }
 
-    public Id getSuccessorId() {
-        return new Id(jobToPlan.getSuccessorId());
+    public Id[] getSuccessorId() {
+        final Id[] successorIds = new Id[jobToPlan.getSuccessorIds().length];
+        for (int i = 0; i < successorIds.length; i++) {
+            successorIds[i] = new Id(jobToPlan.getSuccessorIds()[i]);
+        }
+        return successorIds;
     }
 
 }

@@ -33,4 +33,6 @@ public interface ICollectionWrapper<T extends IEntity> extends Iterable<T> {
     T GetById(Id id);
 
     boolean Contains(T t);
+
+    int size();
 }

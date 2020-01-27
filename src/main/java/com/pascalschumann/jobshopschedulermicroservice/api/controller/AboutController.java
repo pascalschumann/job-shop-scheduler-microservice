@@ -1,6 +1,6 @@
 package com.pascalschumann.jobshopschedulermicroservice.api.controller;
 
-import static com.pascalschumann.jobshopschedulermicroservice.api.configuration.Constants.BASE_URL_ABOUT;
+import static com.pascalschumann.jobshopschedulermicroservice.api.configuration.Constants.API_ENDPOINT_ABOUT;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.info.BuildProperties;
@@ -28,7 +28,7 @@ public class AboutController {
         this.environment = environment;
     }
 
-    @GetMapping(BASE_URL_ABOUT)
+    @GetMapping(API_ENDPOINT_ABOUT)
     About about() {
 
         final About about = new About();

@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.pascalschumann</groupId>
-    <artifactId>spring-rest-crud-template</artifactId>
+    <artifactId>job-shop-scheduler-microservice</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <!-- Service name displayed as heading in Swagger-->
-    <name>Spring REST CRUD Service</name>
+    <name>Job Shop Scheduler Microservice</name>
     <packaging>jar</packaging>
 
     <properties>
@@ -68,6 +68,14 @@
             <artifactId>springfox-swagger-ui</artifactId>
             <version>2.9.2</version>
         </dependency>
+
+        <!-- utils -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.9</version>
+        </dependency>
+
 
         <!-- tests -->
         <dependency>

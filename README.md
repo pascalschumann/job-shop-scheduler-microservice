@@ -1,4 +1,4 @@
-# job-shop-scheduler-microservice ![status](https://travis-ci.com/pascalschumann/job-shop-scheduler-microservice.svg?branch=master "Status")
+# Job Shop Scheduler Microservice ![status](https://travis-ci.com/pascalschumann/job-shop-scheduler-microservice.svg?branch=master "Status")
 Offers a job shop scheduler as microservice with authentication.
 
 ## Implemented features

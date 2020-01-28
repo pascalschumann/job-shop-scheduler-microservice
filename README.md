@@ -13,6 +13,7 @@ Offers a job shop scheduler as microservice with authentication.
 
 ## Planned features
 - Forced Https
+- Bean validation
 - Replacing in-memory database H2 by [Postgres docker container](https://hub.docker.com/_/postgres)
 
 ## Known bugs

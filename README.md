@@ -1,5 +1,5 @@
 # Job Shop Scheduler Microservice ![status](https://travis-ci.com/pascalschumann/job-shop-scheduler-microservice.svg?branch=master "Status")
-Offers a job shop scheduler as microservice with authentication.
+Offers a job shop scheduler as microservice with authentication. The implementation of the scheduler itself is based on my [diploma thesis](https://github.com/pascalschumann/diploma-thesis-central-production-planning)
 
 ## Implemented features
 - REST api for creating/receiving schedules

@@ -24,7 +24,7 @@ import com.pascalschumann.jobshopschedulermicroservice.scheduler.impl.graph.impl
  */
 public class EntityFactory {
 
-    private static final int maxLength = 10;
+    private static final int maxLength = 5;
     private static final AtomicLong idCounter = new AtomicLong(1);
     private static final Random random = new Random();
 

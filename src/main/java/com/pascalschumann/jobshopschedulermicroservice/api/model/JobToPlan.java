@@ -42,6 +42,8 @@ public class JobToPlan implements IEntity {
     @JsonProperty("successorIds")
     private Long[] successorIds = null;
 
+    public JobToPlan() {}
+
     public JobToPlan(final Id id, final Long duration, final Long machineGroupId) {
         this.id = id;
         this.duration = duration;

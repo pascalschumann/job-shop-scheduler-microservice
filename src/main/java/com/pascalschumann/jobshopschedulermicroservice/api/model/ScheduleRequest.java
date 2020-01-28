@@ -25,6 +25,8 @@ public class ScheduleRequest {
     @JsonProperty("machines")
     private Machine[] machines = null;
 
+    public ScheduleRequest() {}
+
     public ScheduleRequest(final Long id, final JobToPlan[] jobsToPlan, final Machine[] machines) {
         this.id = id;
         this.jobsToPlan = jobsToPlan;

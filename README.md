@@ -17,7 +17,7 @@ Offers a job shop scheduler as microservice with authentication.
 
 ## Known bugs
 - Naming convention: Since the scheduler is ported from C#, there some naming issues e.g. methods start with capital letter.
-- /schedules api is not working yet (controller impl issues)
+- /schedules api is not working yet (graph issues)
 
 ## Build, run Tests & operate
 - Build<br>

@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.pascalschumann.jobshopschedulermicroservice.api.model.ScheduleRequest;
@@ -17,9 +18,15 @@ import com.pascalschumann.jobshopschedulermicroservice.api.model.ScheduleRespons
 import com.pascalschumann.jobshopschedulermicroservice.api.service.ScheduleService;
 import com.pascalschumann.jobshopschedulermicroservice.scheduler.impl.datastructure.Id;
 
+import io.swagger.annotations.Api;
+
 /**
  * TODO
  */
+@RestController
+@Api(value = "Schedules",
+                description = "is an endpoint for creating/retrieving job shop schedules.",
+                tags = {"Schedules"})
 public class ScheduleController {
 
     private static final Logger log = LoggerFactory.getLogger(ScheduleController.class);

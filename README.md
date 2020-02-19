@@ -31,10 +31,3 @@ Offers a job shop scheduler as microservice with authentication. The implementat
 `java -jar job-shop-scheduler-microservice.jar -DadminPassword=password -Dspring.profiles.active=dev`
 - For requests use basic auth with user "admin" with configured -DadminPassword
 
-## Used resources
-
-- Starting point: [Spring initializer](https://start.spring.io/)
-- For REST api: [Spring tutorial](https://spring.io/guides/tutorials/rest/) until "What makes something RESTful?" 
-- For basic auth: [Spring security](https://docs.spring.io/spring-security/site/docs/5.2.2.BUILD-SNAPSHOT/reference/htmlsingle/#prerequisites)
-- [RestAssured doc](https://github.com/rest-assured/rest-assured/wiki/Usage)
-- [Maven-Failsafe doc](https://maven.apache.org/surefire/maven-failsafe-plugin/examples/inclusion-exclusion.html)
